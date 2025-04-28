@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Custom Timer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Custom Timer</h1>
+
+  <!-- Sections container -->
+  <div id="inputSection"></div>
+
+  <!-- Main controls -->
+  <div id="controls">
+    <button id="addSection">+ Add Section</button>
+    <button id="startButton">Start Plan</button>
+    <button id="pauseButton" style="display:none;">Pause</button>
+    <button id="resumeButton" style="display:none;">Resume</button>
+    <button id="skipButton">Skip</button>
+    <button id="previousButton">Previous</button>
+    <button id="cancelButton">Cancel Plan</button>
+  </div>
+
+  <!-- Timer display -->
+  <div id="timerDisplay">
+    <div><strong id="currentTimer"></strong></div>
+    <div><span id="countdown"></span></div>
+  </div>
+
+  <!-- Confirmation dialog -->
+  <div id="confirmationBox" style="display:none;">
+    <p>Are you sure you want to cancel the timer plan?<br>This will delete all sections.</p>
+    <button id="confirmReset">Yes, Reset</button>
+    <button id="cancelReset">No, Keep</button>
+  </div>
+
+  <!-- Bell sound (online source) -->
+  <audio id="bellSound" src="bell.mp3" preload="auto"></audio>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
